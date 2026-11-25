@@ -1,0 +1,66 @@
+[
+  {
+    "id": "P-001",
+    "category": "类目 B",
+    "gmv": 478.9,
+    "ctr": 125.3,
+    "ctr75": 123.8,
+    "label": "高GMV高CTR"
+  },
+  {
+    "id": "P-002",
+    "category": "类目 B",
+    "gmv": 209.6,
+    "ctr": 129.1,
+    "ctr75": 123.8,
+    "label": "高GMV高CTR"
+  },
+  {
+    "id": "P-003",
+    "category": "类目 B",
+    "gmv": 189.7,
+    "ctr": 123.8,
+    "ctr75": 123.8,
+    "label": "高GMV高CTR"
+  },
+  {
+    "id": "P-004",
+    "category": "类目 C",
+    "gmv": 2845.5,
+    "ctr": 54.0,
+    "ctr75": 141.6,
+    "label": "高GMV低CTR"
+  },
+  {
+    "id": "P-005",
+    "category": "类目 C",
+    "gmv": 1232.2,
+    "ctr": 29.2,
+    "ctr75": 141.6,
+    "label": "高GMV低CTR"
+  },
+  {
+    "id": "P-006",
+    "category": "类目 C",
+    "gmv": 582.7,
+    "ctr": 40.1,
+    "ctr75": 141.6,
+    "label": "高GMV低CTR"
+  },
+  {
+    "id": "P-007",
+    "category": "类目 C",
+    "gmv": 991.0,
+    "ctr": 130.7,
+    "ctr75": 141.6,
+    "label": "未命中两项规则"
+  },
+  {
+    "id": "P-008",
+    "category": "类目 C",
+    "gmv": 733.6,
+    "ctr": 107.2,
+    "ctr75": 141.6,
+    "label": "未命中两项规则"
+  }
+]
