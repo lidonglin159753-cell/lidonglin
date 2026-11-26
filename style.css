@@ -2061,6 +2061,11 @@ th {
   gap: 12px;
 }
 
+.arch-services.arch-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
 .arch-node {
   background: #ffffff;
   border: 1px solid var(--line);
