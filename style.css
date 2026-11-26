@@ -1757,3 +1757,367 @@ th {
   .story-figure { break-inside: avoid; }
   @page { size: A4; margin: 16mm; }
 }
+
+/* ==========================================================================
+   v14: Featured System Card & MirrorDesk (#case-5) Case Study Styles
+   ========================================================================== */
+.featured-project {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.18fr 0.92fr;
+  flex-direction: row;
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.featured-project:hover {
+  border-color: var(--accent);
+}
+
+.featured-body {
+  padding: 30px 32px 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-body h3 {
+  font-size: 24px;
+  line-height: 1.35;
+  margin: 0 0 14px;
+}
+
+.featured-body p {
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.featured-visual {
+  background:
+    radial-gradient(circle at 88% 12%, rgba(59, 130, 246, 0.22), transparent 48%),
+    radial-gradient(circle at 12% 90%, rgba(16, 185, 129, 0.16), transparent 45%),
+    linear-gradient(155deg, #0f172a 0%, #1e293b 100%);
+  color: #f8fafc;
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  border-left: 1px solid var(--line);
+}
+
+.fv-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  color: #94a3b8;
+}
+
+.fv-top b {
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.14);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.fv-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.fv-metrics > div {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 12px;
+  padding: 14px 12px;
+}
+
+.fv-metrics small {
+  display: block;
+  font-size: 10.5px;
+  color: #94a3b8;
+}
+
+.fv-metrics strong {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 6px 0 4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.fv-metrics > div:first-child strong { color: #60a5fa; }
+.fv-metrics > div:nth-child(2) strong { color: #34d399; }
+
+.fv-metrics span {
+  display: block;
+  font-size: 10.5px;
+  color: #cbd5e1;
+  line-height: 1.4;
+}
+
+.fv-ports {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.fv-ports span {
+  font-size: 11px;
+  color: #e2e8f0;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  padding: 5px 9px;
+  border-radius: 7px;
+}
+
+.fv-ports code {
+  font-family: var(--font-mono);
+  color: #60a5fa;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.fv-foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(148, 163, 184, 0.18);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: #94a3b8;
+}
+
+/* MirrorDesk Metric Audit Panel */
+.audit-panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+  margin: 24px 0;
+}
+
+.audit-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 18px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.audit-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.audit-btn {
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  color: var(--ink-2);
+  font-size: 12.5px;
+  font-weight: 500;
+  transition: all 0.16s ease;
+}
+
+.audit-btn:hover {
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
+.audit-btn[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 4px 12px -4px rgba(37, 99, 235, 0.45);
+}
+
+.audit-count {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.audit-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.audit-conflict { background: #fef2f2; color: #b91c1c; border: 1px solid #fecaca; }
+.audit-estimate { background: #fffbeb; color: #b45309; border: 1px solid #fde68a; }
+.audit-missing { background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent-border); }
+#mirror-audit-tbody tr[hidden] { display: none; }
+
+/* MirrorDesk Custom Feature Grid */
+.mirror-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+
+.mirror-feature-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-xs);
+}
+
+.mf-head span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.mf-head b {
+  display: block;
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.mirror-feature-card p {
+  font-size: 13.5px;
+  line-height: 1.85;
+  color: var(--ink-2);
+  margin: 0;
+}
+
+/* 5-Service Architecture Diagram */
+.arch-diagram {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  margin: 26px 0;
+  box-shadow: var(--shadow-xs);
+}
+
+.arch-launcher {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  text-align: center;
+}
+
+.arch-launcher small {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+.arch-launcher strong {
+  display: block;
+  font-size: 20px;
+  margin: 6px 0 4px;
+}
+
+.arch-launcher span {
+  display: block;
+  font-size: 12.5px;
+  color: #cbd5e1;
+}
+
+.arch-arrow {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  padding: 14px 0;
+}
+
+.arch-services {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.arch-node {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 14px;
+  box-shadow: var(--shadow-xs);
+}
+
+.arch-node.arch-primary { border-top: 3px solid var(--accent); }
+.arch-node.arch-accent { border-top: 3px solid var(--emerald); }
+
+.arch-node code {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 2px 7px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.arch-node.arch-accent code {
+  color: var(--emerald);
+  background: var(--emerald-soft);
+}
+
+.arch-node b {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.arch-node span {
+  display: block;
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+@media (max-width: 960px) {
+  .featured-project { grid-template-columns: 1fr; }
+  .featured-visual { border-left: 0; border-top: 1px solid var(--line); }
+  .arch-services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 720px) {
+  .featured-body { padding: 22px 20px; }
+  .featured-body h3 { font-size: 20px; }
+  .featured-visual { padding: 20px 18px; }
+  .fv-metrics { grid-template-columns: 1fr; }
+  .fv-foot { flex-direction: column; gap: 4px; }
+  .mirror-feature-grid { grid-template-columns: 1fr; }
+  .arch-diagram { padding: 18px 14px; }
+  .arch-services { grid-template-columns: 1fr; }
+}
