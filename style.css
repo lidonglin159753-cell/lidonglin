@@ -2126,3 +2126,239 @@ th {
   .arch-diagram { padding: 18px 14px; }
   .arch-services { grid-template-columns: 1fr; }
 }
+
+/* MirrorDesk Dual-Perspective Switcher, Resume-Origin Grid & Screenshot */
+.mirror-view-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 22px 0 4px;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.mvs-label {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.mvs-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.mvs-tab {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-2);
+  background: #ffffff;
+  border: 1px solid var(--line);
+  transition: all 0.16s ease;
+}
+
+.mvs-tab:hover {
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
+.mvs-tab.is-active {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-color: #0f172a;
+  color: #ffffff;
+  box-shadow: 0 4px 12px -4px rgba(15, 23, 42, 0.35);
+}
+
+.mirror-origin-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0 32px;
+}
+
+.mog-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-xs);
+}
+
+.mog-card small {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.mog-card b {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.45;
+  margin-bottom: 8px;
+}
+
+.mog-card p {
+  font-size: 12.8px;
+  line-height: 1.75;
+  color: var(--ink-2);
+  margin: 0;
+}
+
+.mirror-shot {
+  margin: 24px 0 28px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid #1e293b;
+  background: #0b1120;
+  box-shadow: var(--shadow-md);
+}
+
+.mirror-shot-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+  background: #0f172a;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.ms-dots {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.ms-dots i {
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(148, 163, 184, 0.35);
+}
+
+.ms-title {
+  font-size: 12px;
+  color: #cbd5e1;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ms-badge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.14);
+  border: 1px solid rgba(96, 165, 250, 0.28);
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.mirror-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mirror-shot figcaption {
+  padding: 12px 18px 14px;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  background: #0f172a;
+  border-top: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+@media (max-width: 900px) {
+  .mirror-origin-grid { grid-template-columns: 1fr; }
+}
+
+/* v16: Interactive 3-Screen Showcase & Homepage Terminal Thumbnail */
+.fv-preview {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: 0 10px 28px -8px rgba(0, 0, 0, 0.45);
+  background: #0b1120;
+}
+
+.fv-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mirror-gallery {
+  margin: 24px 0 28px;
+}
+
+.mg-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.mg-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mg-tab {
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-2);
+  font-size: 12.5px;
+  font-weight: 500;
+  transition: all 0.16s ease;
+}
+
+.mg-tab:hover {
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
+.mg-tab[aria-selected="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #ffffff;
+  box-shadow: var(--shadow-xs);
+}
+
+.mg-raw {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.mg-raw:hover {
+  text-decoration: underline;
+}
